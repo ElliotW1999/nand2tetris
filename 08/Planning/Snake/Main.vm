@@ -1,0 +1,23 @@
+function Main.main 2
+call Snake.new 0
+pop local 1
+label WHILE_EXP0
+push constant 1
+not
+if-goto WHILE_END0
+call Keyboard.keyPressed 0
+pop local 0
+push local 1
+push local 0
+call Snake.direction 2
+pop temp 0
+push local 1
+call Snake.update 1
+pop temp 0
+push constant 100
+call Sys.wait 1
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
