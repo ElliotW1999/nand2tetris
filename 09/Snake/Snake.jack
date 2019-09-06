@@ -1,0 +1,52 @@
+class Snake {
+	
+	field int length;
+	field int xDirection;
+	field int yDirection;
+	field Array tail;
+	var Array temp;
+	
+	constructor Snake new() {
+		let xDirection = 35;
+		let yDirection = 35;
+		let tail = Array.new(1);
+		let temp = Array.new(2);
+	 
+		let temp[0] = xDirection;
+		let temp[1] = yDirection;
+		let tail[0] = temp;
+		return this;
+	}
+
+	method void direction(char key) {					// if tail[].length>1, cannot go 180
+		if (key = 131) {							// up arrow
+			let xDirection = 0; 
+			let yDirection = -1;
+		}   
+		if (key = 133) {							// down arrow
+			let xDirection = 0; 
+			let yDirection = 1;
+		}   
+		if (key = 130) { 							// left arrow
+			let xDirection = -1; 
+			let yDirection = 0; 
+		}   
+		if (key = 132) { 							// right arrow
+			let xDirection = 1; 
+			let yDirection = 0; 
+		}   
+        return;
+    }
+	
+	method void update() {
+		//snake hits apple
+		//snake hits tail
+		setColor(false);			//create helper function
+		drawPixel(tail[0][0], tail[0][1]);
+		
+		let tail[0][0] = tail[0][0] + xDirection;
+		let tail[0][1] = tail[0][1] + yDirection;
+		setColor(true);
+		drawPixel(tail[0][0], tail[0][1]);
+    }
+}

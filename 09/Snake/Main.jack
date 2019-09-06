@@ -1,0 +1,19 @@
+/** Initializes a new Snake game and starts running it. */
+
+class Main {
+    function void main() {
+		var Snake snake;
+        let snake = Snake.new();
+		//var Apple apple;
+		// let apple = Apple.new()
+		var int key;
+		while(1){
+			let key = Keyboard.keyPressed();
+			do Snake.direction(key);
+			do Snake.update;
+			do Sys.wait(100);
+			
+		}
+        return;
+    }
+}
