@@ -1,0 +1,14 @@
+Destination translation
+
+1 1 1 a c1 c2 c3 c4 c5 c6 [d1 d2 d3] j1 j2 j3
+
+dest	d1 d2 d3
+
+null	0  0  0
+M		0  0  1
+D		0  1  0
+MD		0  1  1
+A		1  0  0
+AM		1  0  1
+AD		1  1  0
+AMD		1  1  1
